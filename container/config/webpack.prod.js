@@ -17,7 +17,8 @@ const config = {
             name: 'container',
             remotes: {
                 marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`
-            }
+            },
+            shared: packages.dependencies,
         })
     ]
 };
