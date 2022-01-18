@@ -13,6 +13,7 @@ const config = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'marketing',
+            filename: 'remoteEntry.js',
             exposes: {
                 './MarketingApp': './src/bootstrap'
             },
