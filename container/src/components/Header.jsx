@@ -70,6 +70,7 @@ export default function Header({ isSignedIn, onSignOut }) {
         color="default"
         elevation={0}
         className={classes.appBar}
+        data-test="test"
       >
         <Toolbar className={classes.toolbar}>
           <Typography
