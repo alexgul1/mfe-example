@@ -2,19 +2,23 @@ import React from 'react'
 import {Switch, Route, Router} from "react-router-dom";
 import {createGenerateClassName, StylesProvider} from "@material-ui/core";
 
-import Landing from './components/Landing';
-import Pricing from "./components/Pricing";
-
 const generateClassName = createGenerateClassName({
-    productionPrefix: 'marketing'
+    productionPrefix: 'auth'
 })
 
-const App = ({history}) => (
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
+
+const App = ({history, onSignIn}) => (
     <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
             <Switch>
-                <Route path="/pricing" component={Pricing}/>
-                <Route exact path="/" component={Landing}/>
+                <Route path={'/auth/signin'} >
+                    <Signin onSignIn={onSignIn} />
+                </Route>
+                <Route path={'/auth/signup'}>
+                    <Signup onSignIn={onSignIn} />
+                </Route>
             </Switch>
         </Router>
     </StylesProvider>
