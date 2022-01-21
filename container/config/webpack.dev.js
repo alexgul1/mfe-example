@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 
 const devConfig = {
-    mode: 'development',
+    mode: 'production',
     output: {
         publicPath: 'http://localhost:8080/'
     },

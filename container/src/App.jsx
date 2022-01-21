@@ -27,7 +27,6 @@ const App = () => {
                         <Route path="/auth/" >
                             <AuthLazy onSignIn={onSignIn}/>
                         </Route>
-
                         <Route path="/" component={MarketingLazy} />
                     </Switch>
                 </Suspense>
