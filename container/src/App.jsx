@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Loader from "./components/Loader";
 
 const generateClassName = createGenerateClassName({
-    productionPrefix: 'container'
+    productionPrefix: 'co'
 })
 
 const MarketingLazy = lazy(() => import('./components/MarketingApp'));

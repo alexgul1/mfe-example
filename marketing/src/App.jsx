@@ -6,18 +6,19 @@ import Landing from './components/Landing';
 import Pricing from "./components/Pricing";
 
 const generateClassName = createGenerateClassName({
-    productionPrefix: 'marketing'
+    productionPrefix: 'ma'
 })
 
 const App = ({history}) => (
-    <StylesProvider generateClassName={generateClassName}>
-        <Router history={history}>
+    <Router history={history}>
+        <StylesProvider generateClassName={generateClassName}>
             <Switch>
                 <Route path="/pricing" component={Pricing}/>
                 <Route exact path="/" component={Landing}/>
             </Switch>
-        </Router>
-    </StylesProvider>
+        </StylesProvider>
+
+    </Router>
 )
 
 export default App
