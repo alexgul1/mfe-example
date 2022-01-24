@@ -13,11 +13,14 @@ const App = ({history}) => (
     <Router history={history}>
         <StylesProvider generateClassName={generateClassName}>
             <Switch>
-                <Route path="/pricing" component={Pricing}/>
-                <Route exact path="/" component={Landing}/>
+                <Route path="/pricing">
+                    <Pricing/>
+                </Route>
+                <Route exact path="/">
+                    <Landing/>
+                </Route>
             </Switch>
         </StylesProvider>
-
     </Router>
 )
 

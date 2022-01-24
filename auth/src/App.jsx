@@ -22,6 +22,6 @@ const App = ({history, onSignIn}) => (
             </Switch>
         </StylesProvider>
     </Router>
-)
+);
 
 export default App

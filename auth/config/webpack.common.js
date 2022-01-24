@@ -4,6 +4,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
     },
+    output: {
+        uniqueName: 'au'
+    },
     module: {
         rules: [
             {
